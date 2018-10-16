@@ -8,14 +8,13 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2d;
     [SerializeField]
     private float speed;
-    private int count;
+    private int count = 0;
     public Text countText;
     public Text winText;
     void Update()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        count = 0;
-        winText.text = "You Win";
+        winText.text = "";
         SetCountText();
     }
     void FixedUpdate()
